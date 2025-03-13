@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f766e',     // Teal
+            secondary: '#be123c',   // Rose
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition duration-300">
+
+  <!-- ========== Dashboard Section ========== -->
+  <section id="dashboard" class="py-20 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- Top Navigation Bar -->
+      <div class="flex justify-between items-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg mb-6">
+        <div class="text-xl font-semibold text-primary dark:text-rose-300">
+          Dashboard
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="Portfolio.html" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-teal-700 dark:bg-rose-400 dark:hover:bg-rose-500">
+              Portfolio
+            </a>
+          </div>
+          
+      </div>
+
+      <div class="flex space-x-6">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+          <ul class="space-y-4">
+            <li><a href="#overview" class="text-lg hover:text-primary transition">Overview</a></li>
+            <li><a href="#analytics" class="text-lg hover:text-primary transition">Analytics</a></li>
+            <li><a href="#tasks" class="text-lg hover:text-primary transition">Tasks</a></li>
+            <li><a href="#notifications" class="text-lg hover:text-primary transition">Notifications</a></li>
+            <li><a href="#settings" class="text-lg hover:text-primary transition">Settings</a></li>
+          </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="w-3/4 space-y-6">
+          <!-- Widgets Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Widget 1 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h4 class="text-xl font-semibold text-primary dark:text-rose-300 mb-4">Widgets 1</h4>
+              <p class="text-1.5xl font-bold text-gray-800 dark:text-gray-200">Some Content...</p>
+            </div>
+
+            <!-- Widget 2 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 class="text-xl font-semibold text-primary dark:text-rose-300 mb-4">Widgets 2</h4>
+                <p class="text-1.5xl font-bold text-gray-800 dark:text-gray-200">Some Content...</p>
+            </div>
+
+            <!-- Widget 3 -->
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 class="text-xl font-semibold text-primary dark:text-rose-300 mb-4">Widgets 3</h4>
+                <p class="text-1.5xl font-bold text-gray-800 dark:text-gray-200">Some Content...</p>
+            </div>
+          </div>
+
+          <!-- Analytics & Reports Section -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h4 class="text-xl font-semibold text-primary dark:text-rose-300 mb-4">Analytics & Reports</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+              <!-- Analytics Card 1 -->
+              <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                <h5 class="font-semibold text-primary dark:text-rose-300">Page Views</h5>
+                <p class="text-2xl font-bold text-gray-800 dark:text-gray-200">45,678</p>
+              </div>
+
+              <!-- Analytics Card 2 -->
+              <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                <h5 class="font-semibold text-primary dark:text-rose-300">Bounce Rate</h5>
+                <p class="text-2xl font-bold text-gray-800 dark:text-gray-200">34%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Theme Toggle Function (Optional)
+    const themeToggleBtn = document.getElementById("themeToggle");
+    themeToggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
